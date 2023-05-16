@@ -22,3 +22,9 @@ body {
   text-align: center;
   width: 80px;
 }
+
+.row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
