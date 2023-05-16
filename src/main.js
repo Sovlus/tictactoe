@@ -1,9 +1,8 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
-function kwadrat1({ value, onClick }) {
+function Kwadrat1({ value, onClick }) {
   return (
-    <button className='kwadrat1' onClick={{ onClick }}>
+    <button className='kwadrat1' onClick={onClick}>
       {value}
     </button>
   );
@@ -17,6 +16,7 @@ function Main() {
   const handleClick = (i) = {
     squares[i] = isX ? 'X' : '0'
     setSquares(squares)
+    setIsX(!isX)
   }
 
   return (
