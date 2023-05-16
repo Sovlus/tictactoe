@@ -19,7 +19,13 @@ function ktoWygral(squares) {
     [2, 5, 8],
     [0, 4, 8], // na krzyż
     [2, 4, 6],
-  ];
+  ]
+
+  for (let i = 0 < ktoWygral.length; i++) {
+    const [a, b, c] = ktoWygral[i]
+
+    if (sq)
+  }
 }
 
 function Main() {
