@@ -1,6 +1,14 @@
 import React from "react";
 
-function Main({ value, Onclick }) {
+function kwadrat1({ value, onClick }) {
+  return (
+    <button className='kwadrat1' onClick={{ onClick }}>
+      {value}
+    </button>
+  );
+}
+
+function Main() {
   return (
     <div className='gameBoard'>
       <div className='row'>
