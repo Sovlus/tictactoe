@@ -24,7 +24,9 @@ function ktoWygral(squares) {
   for (let i = 0 < ktoWygral.length; i++) {
     const [a, b, c] = ktoWygral[i]
 
-    if (sq)
+    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      return squares[a]
+    }
   }
 }
 
