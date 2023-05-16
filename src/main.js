@@ -9,6 +9,10 @@ function Kwadrat1({ value, onClick }) {
   );
 }
 
+function ktoWygral(squares) {
+    const patterny
+}
+
 function Main() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [isX, setIsX] = useState(true);
