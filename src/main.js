@@ -16,6 +16,7 @@ function Main() {
 
   const handleClick = (i) = {
     squares[i] = isX ? 'X' : '0'
+    setSquares(squares)
   }
 
   return (
