@@ -11,12 +11,13 @@ function Kwadrat1({ value, onClick }) {
 function Main() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [isX, setIsX] = useState(true);
-  
-  const handleClick = (i) = {
-    squares[i] = isX ? 'X' : '0'
-    setSquares(squares)
-    setIsX(!isX)
-  }
+
+  const handleClick = (i) => {
+    const updatedSquares = [...squares];
+    updatedSquares[i] = isX ? "X" : "0";
+    setSquares(updatedSquares);
+    setIsX(!isX);
+  };
 
   return (
     <div className='gameBoard'>
