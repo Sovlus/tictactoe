@@ -11,6 +11,7 @@ function kwadrat1({ value, onClick }) {
 
 function Main() {
   const [squares, setSquares] = React.useState(Array(9));
+  const [isX, setIsX] - React.useState(true)
 
   return (
     <div className='gameBoard'>
