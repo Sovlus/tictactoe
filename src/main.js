@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./App.css";
 
 function Kwadrat1({ value, onClick }) {
   return (
@@ -22,19 +23,55 @@ function Main() {
   return (
     <div className='gameBoard'>
       <div className='row'>
-        <Kwadrat1 value={squares[0]} onClick={() => handleClick(0)} />
-        <Kwadrat1 value={squares[1]} onClick={() => handleClick(1)} />
-        <Kwadrat1 value={squares[2]} onClick={() => handleClick(2)} />
+        <Kwadrat1
+          className='sqr'
+          value={squares[0]}
+          onClick={() => handleClick(0)}
+        />
+        <Kwadrat1
+          className='sqr'
+          value={squares[1]}
+          onClick={() => handleClick(1)}
+        />
+        <Kwadrat1
+          className='sqr'
+          value={squares[2]}
+          onClick={() => handleClick(2)}
+        />
       </div>
       <div className='row'>
-        <Kwadrat1 value={squares[3]} onClick={() => handleClick(3)} />
-        <Kwadrat1 value={squares[4]} onClick={() => handleClick(4)} />
-        <Kwadrat1 value={squares[5]} onClick={() => handleClick(5)} />
+        <Kwadrat1
+          className='sqr'
+          value={squares[3]}
+          onClick={() => handleClick(3)}
+        />
+        <Kwadrat1
+          className='sqr'
+          value={squares[4]}
+          onClick={() => handleClick(4)}
+        />
+        <Kwadrat1
+          className='sqr'
+          value={squares[5]}
+          onClick={() => handleClick(5)}
+        />
       </div>
       <div className='row'>
-        <Kwadrat1 value={squares[6]} onClick={() => handleClick(6)} />
-        <Kwadrat1 value={squares[7]} onClick={() => handleClick(7)} />
-        <Kwadrat1 value={squares[8]} onClick={() => handleClick(8)} />
+        <Kwadrat1
+          className='sqr'
+          value={squares[6]}
+          onClick={() => handleClick(6)}
+        />
+        <Kwadrat1
+          className='sqr'
+          value={squares[7]}
+          onClick={() => handleClick(7)}
+        />
+        <Kwadrat1
+          className='sqr'
+          value={squares[8]}
+          onClick={() => handleClick(8)}
+        />
       </div>
     </div>
   );
