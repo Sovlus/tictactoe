@@ -9,10 +9,9 @@ function Kwadrat1({ value, onClick }) {
 }
 
 function Main() {
-  const [squares, setSquares] = React.useState(Array(9));
+  const [squares, setSquares] = useState(Array(9).fill(null));
+  const [isX, setIsX] = useState(true);
   
-  const [isX, setIsX] - React.useState(true);
-
   const handleClick = (i) = {
     squares[i] = isX ? 'X' : '0'
     setSquares(squares)
