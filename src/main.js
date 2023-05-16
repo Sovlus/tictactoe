@@ -1,6 +1,6 @@
 import React from "react";
 
-function Main() {
+function Main({ value, Onclick }) {
   return (
     <div className='gameBoard'>
       <div className='row'>
