@@ -10,15 +10,13 @@ body {
 .gameBoard {
 }
 
-.kwadrat {
+.kwadrat1 {
   border: 1px solid #999;
   float: left;
   font-size: 40px;
   height: 80px;
   line-height: 75px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
+  padding: 5px;
   text-align: center;
   width: 80px;
 }
