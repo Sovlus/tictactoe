@@ -19,15 +19,17 @@ function ktoWygral(squares) {
     [2, 5, 8],
     [0, 4, 8], // na krzyż
     [2, 4, 6],
-  ]
+  ];
 
-  for (let i = 0 < ktoWygral.length; i++) {
-    const [a, b, c] = ktoWygral[i]
+  for (let i = 0; i < patterny.length; i++) {
+    const [a, b, c] = patterny[i];
 
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a]
+      return squares[a];
     }
   }
+
+  return null;
 }
 
 function Main() {
