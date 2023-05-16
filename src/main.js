@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 function kwadrat1({ value, onClick }) {
   return (
@@ -9,6 +10,8 @@ function kwadrat1({ value, onClick }) {
 }
 
 function Main() {
+  const [squares, setSquares] = React.useState(Array(9));
+
   return (
     <div className='gameBoard'>
       <div className='row'>
