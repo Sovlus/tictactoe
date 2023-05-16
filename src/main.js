@@ -1,20 +1,18 @@
 import React from "react";
 
-function kwadrat({ value }) {
-  return <button className='kwadrat'>{value}</button>;
-}
-
-function nineSquares() {
+function Main() {
   return (
     <div className='gameBoard'>
-      <kwadrat value={"X"} />
-      <kwadrat value={"0"} />
-      <kwadrat value={"X"} />
-      <kwadrat value={"0"} />
-      <kwadrat value={"X"} />
-      <kwadrat value={"0"} />
-      <kwadrat value={"X"} />
-      <kwadrat value={"0"} />
+      <div className='kwadrat'>X</div>
+      <div className='kwadrat'>0</div>
+      <div className='kwadrat'>X</div>
+      <div className='kwadrat'>0</div>
+      <div className='kwadrat'>X</div>
+      <div className='kwadrat'>0</div>
+      <div className='kwadrat'>X</div>
+      <div className='kwadrat'>0</div>
     </div>
   );
 }
+
+export default Main;
