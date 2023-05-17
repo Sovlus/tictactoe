@@ -9,6 +9,16 @@ function Kwadrat1({ value, onClick }) {
   );
 }
 
+const handleClick = (i) => {
+  if (calculateWinner(squares) || squares[i]) {
+    return;
+  }
+
+  squares[i] = isX ? "X" : "O";
+  setSquares(squares);
+  setIsX(!isX);
+};
+
 function ktoWygral(squares) {
   const patterny = [
     [0, 1, 2], // poziomo
