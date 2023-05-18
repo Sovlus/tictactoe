@@ -32,13 +32,22 @@ function ktoWygral(squares) {
   return null;
 }
 
+function GameStatus({ winner }) {
+  if (winner) {
+    return <h5>{winner} Wygrał grę!!!!!!</h5>;
+  } else {
+    return null;
+  }
+}
+
 function Main() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [isX, setIsX] = useState(true);
+  const winner = ktoWygral(squares);
 
   const handleClick = (i) => {
-    if (squares[i] !== null) {
-      // jeśli jest juz postawione nie można zmienić
+    if (squares[i] !== null || winner) {
+      // jesli kwadrat zajety, nie pozwalaj na zmiane
       return;
     }
 
@@ -101,6 +110,7 @@ function Main() {
           onClick={() => handleClick(8)}
         />
       </div>
+      <GameStatus winner={winner} />
     </div>
   );
 }
