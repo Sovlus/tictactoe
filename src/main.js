@@ -44,6 +44,8 @@ function Main() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [isX, setIsX] = useState(true);
   const winner = ktoWygral(squares);
+  const [playerXName, setPlayerXName] = useState("");
+  const [player0Name, setPlayer0Name] = useState("");
 
   const handleClick = (i) => {
     if (squares[i] !== null || winner) {
@@ -110,7 +112,11 @@ function Main() {
           onClick={() => handleClick(8)}
         />
       </div>
-      <GameStatus winner={winner} />
+      <GameStatus
+        winner={winner}
+        playerXName={playerXName}
+        player0Name={player0Name}
+      />
     </div>
   );
 }
