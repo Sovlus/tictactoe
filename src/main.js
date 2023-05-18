@@ -74,7 +74,7 @@ function Main() {
         <div className='inputy'>
           <input
             type='text'
-            placeholder='Nazwa gracza X'
+            placeholder='Wpisz nazwe gracza X'
             value={playerXName}
             onChange={(e) => setPlayerXName(e.target.value)}
             required
@@ -82,7 +82,7 @@ function Main() {
           <br></br>
           <input
             type='text'
-            placeholder='Nazwa gracza 0'
+            placeholder='Wpisz nazwe gracza 0'
             value={player0Name}
             onChange={(e) => setPlayer0Name(e.target.value)}
             required
