@@ -70,7 +70,7 @@ function Main() {
   return (
     <div className='gameBoard'>
       {!gameStarted && (
-        <div>
+        <div className='inputy'>
           <input
             type='text'
             placeholder='Nazwa gracza X'
