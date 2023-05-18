@@ -56,4 +56,18 @@ input {
   margin-bottom: 5px;
 }
 
+@keyframes colorLoop {
+  0% {
+    color: red;
+  }
+25% {
+  color: blue;
+}
+50% {
+  color: green;
+}
 
+
+
+
+}
