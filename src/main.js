@@ -61,6 +61,21 @@ function Main() {
 
   return (
     <div className='gameBoard'>
+      <div className='inputy'>
+        <input
+          type='text'
+          placeholder='Nazwa Gracza X'
+          value={playerXName}
+          onChange={(e) => setPlayerXName(e.target.value)}
+        />
+        <input
+          type='text'
+          placeholder='Nazwa gracza "0'
+          value={player0Name}
+          onChange={(e) => setPlayer0Name(e.target.value)}
+        />
+      </div>
+
       <div className='row'>
         <Kwadrat1
           className='sqr'
