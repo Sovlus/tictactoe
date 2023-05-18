@@ -49,8 +49,11 @@ h5 {
 h1 {
   margin-bottom: 60px;
   font-size: 80px;
+  animation colorLoop 5s infinite;
 }
 
 input {
   margin-bottom: 5px;
 }
+
+
