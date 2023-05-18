@@ -92,3 +92,14 @@ input {
     color: rgb(255, 0, 127);
   }
 }
+
+@keyframes black {
+  100% {
+    color: black;
+  }
+}
+
+h1:hover {
+  animation-play-state: paused;
+  animation: black;
+}
