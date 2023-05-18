@@ -64,6 +64,9 @@ function Main() {
   const handleStartGame = () => {
     if (playerXName.trim() !== "" && player0Name.trim() !== "") {
       setGameStarted(true);
+      setPlayerXError(false);
+      setPlayer0Error(false);
+    } else {
     }
   };
 
@@ -79,6 +82,7 @@ function Main() {
             onChange={(e) => setPlayerXName(e.target.value)}
             required
           />
+          <br></br>
           <input
             type='text'
             placeholder='Nazwa gracza 0'
@@ -86,6 +90,7 @@ function Main() {
             onChange={(e) => setPlayer0Name(e.target.value)}
             required
           />
+          <br></br>
           <button onClick={handleStartGame}>Zacznij grę</button>
         </div>
       )}
