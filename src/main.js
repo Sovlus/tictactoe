@@ -67,6 +67,7 @@ function Main() {
       setPlayerXError(false);
       setPlayer0Error(false);
     } else {
+      setPlayertXError(playerXName.trim() === "");
     }
   };
 
