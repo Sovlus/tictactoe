@@ -69,6 +69,7 @@ function Main() {
 
   return (
     <div className='gameBoard'>
+      <h1>Tic Tac Toe</h1>
       {!gameStarted && (
         <div className='inputy'>
           <input
