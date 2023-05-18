@@ -48,10 +48,8 @@ function Main() {
   const [playerXName, setPlayerXName] = useState("");
   const [player0Name, setPlayer0Name] = useState("");
 
-const handleClick = (i) => {
-  if (!gameStarted || squares[i] !== null || winner) {
-    return;
-  }
+  const handleClick = (i) => {
+    if (squares[i] !== null || winner) {
       // jesli kwadrat zajety, nie pozwalaj na zmiane
       return;
     }
@@ -60,6 +58,12 @@ const handleClick = (i) => {
     updatedSquares[i] = isX ? "X" : "0";
     setSquares(updatedSquares);
     setIsX(!isX);
+  };
+
+  const handleStartGame = () => {
+    if (playerXName.trim() !== "" && player0Name.trim() !== "") {
+      setGameStarted(true);
+    }
   };
 
   return (
