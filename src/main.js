@@ -35,7 +35,7 @@ function ktoWygral(squares) {
 function GameStatus({ winner, playerXName, player0Name }) {
   if (winner) {
     const winnerName = winner === "X" ? playerXName : player0Name;
-    return <h5>{winnerName} Wygrał grę!!!!!!</h5>;
+    return <h5>{winnerName} wygrał grę!</h5>;
   } else {
     return null;
   }
@@ -44,13 +44,14 @@ function GameStatus({ winner, playerXName, player0Name }) {
 function Main() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [isX, setIsX] = useState(true);
-  const winner = ktoWygral(squares);
   const [playerXName, setPlayerXName] = useState("");
   const [player0Name, setPlayer0Name] = useState("");
+  const [gameStarted, setGameStarted] = useState(false);
+
+  const winner = ktoWygral(squares);
 
   const handleClick = (i) => {
-    if (squares[i] !== null || winner) {
-      // jesli kwadrat zajety, nie pozwalaj na zmiane
+    if (!gameStarted || squares[i] !== null || winner) {
       return;
     }
 
@@ -68,23 +69,6 @@ function Main() {
 
   return (
     <div className='gameBoard'>
-      <div className='inputy'>
-        <input
-          type='text'
-          placeholder='PNazwa gracza X'
-          value={playerXName}
-          onChange={(e) => setPlayerXName(e.target.value)}
-          required
-        />
-        <input
-          type='text'
-          placeholder='Nazwa gracza 0'
-          value={player0Name}
-          onChange={(e) => setPlayer0Name(e.target.value)}
-          required
-        />
-      </div>
-
       <div className='row'>
         <Kwadrat1
           className='sqr'
@@ -136,6 +120,25 @@ function Main() {
           onClick={() => handleClick(8)}
         />
       </div>
+      {!gameStarted && (
+        <div>
+          <input
+            type='text'
+            placeholder='Nazwa gracza X'
+            value={playerXName}
+            onChange={(e) => setPlayerXName(e.target.value)}
+            required
+          />
+          <input
+            type='text'
+            placeholder='Nazwa gracza 0'
+            value={player0Name}
+            onChange={(e) => setPlayer0Name(e.target.value)}
+            required
+          />
+          <button onClick={handleStartGame}>Zacznij grę</button>
+        </div>
+      )}
       <GameStatus
         winner={winner}
         playerXName={playerXName}
