@@ -37,6 +37,11 @@ function Main() {
   const [isX, setIsX] = useState(true);
 
   const handleClick = (i) => {
+    if (squares[i] !== null) {
+      // jeśli jest juz postawione nie można zmienić
+      return;
+    }
+
     const updatedSquares = [...squares];
     updatedSquares[i] = isX ? "X" : "0";
     setSquares(updatedSquares);
