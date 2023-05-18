@@ -49,7 +49,7 @@ h5 {
 h1 {
   margin-bottom: 60px;
   font-size: 80px;
-  animation colorLoop 5s infinite;
+  animation: colorLoop 5s infinite;
 }
 
 input {
@@ -60,16 +60,16 @@ input {
   0% {
     color: red;
   }
-25% {
-  color: blue;
-}
-50% {
-  color: green;
-}
-75% {
-  color: yellow;
-}
-100% {
-  color: red;
-}
+  25% {
+    color: blue;
   }
+  50% {
+    color: green;
+  }
+  75% {
+    color: yellow;
+  }
+  100% {
+    color: red;
+  }
+}
