@@ -50,3 +50,7 @@ h1 {
   margin-bottom: 60px;
   font-size: 80px;
 }
+
+input {
+  margin-bottom: 5px;
+}
