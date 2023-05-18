@@ -32,9 +32,10 @@ function ktoWygral(squares) {
   return null;
 }
 
-function GameStatus({ winner }) {
+function GameStatus({ winner, playerXName, player0Name }) {
   if (winner) {
-    return <h5>{winner} Wygrał grę!!!!!!</h5>;
+    const winnerName = winner === "X" ? playerXName : player0Name;
+    return <h5>{winnerName} Wygrał grę!!!!!!</h5>;
   } else {
     return null;
   }
