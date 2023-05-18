@@ -35,7 +35,7 @@ function ktoWygral(squares) {
 function GameStatus({ winner, playerXName, player0Name }) {
   if (winner) {
     const winnerName = winner === "X" ? playerXName : player0Name;
-    return <h5>{winnerName} wygrał grę!</h5>;
+    return <h5>{winner} wygrał grę!</h5>;
   } else {
     return null;
   }
@@ -45,7 +45,7 @@ function Main() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [isX, setIsX] = useState(true);
   const [playerXName, setPlayerXName] = useState("");
-  const [player0Name, setPlayer0Name] = useState("");
+  const [playerOName, setPlayerOName] = useState("");
   const [gameStarted, setGameStarted] = useState(false);
 
   const winner = ktoWygral(squares);
@@ -56,13 +56,13 @@ function Main() {
     }
 
     const updatedSquares = [...squares];
-    updatedSquares[i] = isX ? "X" : "0";
+    updatedSquares[i] = isX ? "X" : "O";
     setSquares(updatedSquares);
     setIsX(!isX);
   };
 
   const handleStartGame = () => {
-    if (playerXName.trim() !== "" && player0Name.trim() !== "") {
+    if (playerXName.trim() !== "" && playerOName.trim() !== "") {
       setGameStarted(true);
     }
   };
@@ -82,9 +82,9 @@ function Main() {
           <br></br>
           <input
             type='text'
-            placeholder='Wpisz nazwe gracza 0'
-            value={player0Name}
-            onChange={(e) => setPlayer0Name(e.target.value)}
+            placeholder='Wpisz nazwe gracza O'
+            value={playerOName}
+            onChange={(e) => setPlayerOName(e.target.value)}
             required
           />
           <br></br>
@@ -145,7 +145,7 @@ function Main() {
       <GameStatus
         winner={winner}
         playerXName={playerXName}
-        player0Name={player0Name}
+        playerOName={playerOName}
       />
     </div>
   );
