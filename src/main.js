@@ -69,6 +69,25 @@ function Main() {
 
   return (
     <div className='gameBoard'>
+      {!gameStarted && (
+        <div>
+          <input
+            type='text'
+            placeholder='Nazwa gracza X'
+            value={playerXName}
+            onChange={(e) => setPlayerXName(e.target.value)}
+            required
+          />
+          <input
+            type='text'
+            placeholder='Nazwa gracza 0'
+            value={player0Name}
+            onChange={(e) => setPlayer0Name(e.target.value)}
+            required
+          />
+          <button onClick={handleStartGame}>Zacznij grę</button>
+        </div>
+      )}
       <div className='row'>
         <Kwadrat1
           className='sqr'
@@ -120,25 +139,6 @@ function Main() {
           onClick={() => handleClick(8)}
         />
       </div>
-      {!gameStarted && (
-        <div>
-          <input
-            type='text'
-            placeholder='Nazwa gracza X'
-            value={playerXName}
-            onChange={(e) => setPlayerXName(e.target.value)}
-            required
-          />
-          <input
-            type='text'
-            placeholder='Nazwa gracza 0'
-            value={player0Name}
-            onChange={(e) => setPlayer0Name(e.target.value)}
-            required
-          />
-          <button onClick={handleStartGame}>Zacznij grę</button>
-        </div>
-      )}
       <GameStatus
         winner={winner}
         playerXName={playerXName}
