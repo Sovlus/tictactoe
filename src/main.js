@@ -47,6 +47,8 @@ function Main() {
   const [playerXName, setPlayerXName] = useState("");
   const [player0Name, setPlayer0Name] = useState("");
   const [gameStarted, setGameStarted] = useState(false);
+  const [playerXError, setPlayerXError] = useState(false);
+  const [player0Error, setPlayer0Error] = useState(false);
 
   const winner = ktoWygral(squares);
 
